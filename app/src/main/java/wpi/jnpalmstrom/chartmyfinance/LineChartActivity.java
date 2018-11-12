@@ -19,6 +19,7 @@ import lecho.lib.hellocharts.view.LineChartView;
 
 public class LineChartActivity extends AppCompatActivity {
 
+    // Initialize the Line Chart View
     private LineChartView lineChartView;
 
     @Override
@@ -51,15 +52,17 @@ public class LineChartActivity extends AppCompatActivity {
     }
     // Code for Menu Ends Here
 
+    // This function creates the Line Chart using static data points
     public void drawLineChart() {
 
         lineChartView = (LineChartView) findViewById(R.id.line_chart);
 
         List<PointValue> values = new ArrayList<>();
-        values.add(new PointValue(0, 2));
-        values.add(new PointValue(1, 4));
-        values.add(new PointValue(2, 3));
-        values.add(new PointValue(3, 4));
+        values.add(new PointValue(0, 0));
+        values.add(new PointValue(1, 2));
+        values.add(new PointValue(2, 4));
+        values.add(new PointValue(3, 3));
+        values.add(new PointValue(4, 4));
 
         Line line = new Line(values)
                 .setColor(Color.BLUE)
@@ -71,29 +74,32 @@ public class LineChartActivity extends AppCompatActivity {
 
         LineChartData data = new LineChartData();
         data.setLines(lines);
+        
+        AxisValue tempAxisValue; // Temporary Placeholder for Axis-Values in for loop
 
+        // Create X-Axis data points from 0 to 10
         List<AxisValue> axisValuesForX = new ArrayList<>();
-        List<AxisValue> axisValuesForY = new ArrayList<>();
-        AxisValue tempAxisValue;
-
         for (int i = 0; i <= 10; i++){
             tempAxisValue = new AxisValue(i);
             tempAxisValue.setLabel(""+i);
             axisValuesForX.add(tempAxisValue);
         }
 
+        // Create Y-Axis data points from 0 to 10
+        List<AxisValue> axisValuesForY = new ArrayList<>();
         for (int i = 0; i <= 10; i++){
             tempAxisValue = new AxisValue(i);
             tempAxisValue.setLabel(""+i);
             axisValuesForY.add(tempAxisValue);
         }
 
+        // Create X & Y Axis and initialize with data points generated above
         Axis xAxis = new Axis(axisValuesForX);
         Axis yAxis = new Axis(axisValuesForY);
 
+        // Set the Orientation and the Names of the X & Y Axises
         data.setAxisXBottom(xAxis);
         data.setAxisYLeft(yAxis);
-
         xAxis.setName("Axis X");
         yAxis.setName("Axis Y");
 
