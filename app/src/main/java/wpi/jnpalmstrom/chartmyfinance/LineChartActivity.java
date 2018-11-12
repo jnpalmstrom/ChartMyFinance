@@ -74,7 +74,7 @@ public class LineChartActivity extends AppCompatActivity {
 
         LineChartData data = new LineChartData();
         data.setLines(lines);
-        
+
         AxisValue tempAxisValue; // Temporary Placeholder for Axis-Values in for loop
 
         // Create X-Axis data points from 0 to 10
