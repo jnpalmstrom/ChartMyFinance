@@ -13,4 +13,9 @@
         app:showAsAction="never">
     </item>
 
+    <item android:id="@+id/pie_chart_item"
+        android:title="@string/pie_chart"
+        app:showAsAction="never">
+    </item>
+
 </menu>

@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
             // Go to Gallery Activity
             startActivity(new Intent(MainActivity.this, LineChartActivity.class));
         }
+        else if (item.getItemId() == R.id.pie_chart_item) {
+            // Go to Gallery Activity
+            startActivity(new Intent(MainActivity.this, PieChartActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
     // Code for Menu ends here

@@ -47,6 +47,10 @@ public class LineChartActivity extends AppCompatActivity {
             // Go to Gallery Activity
             startActivity(new Intent(LineChartActivity.this, LineChartActivity.class));
         }
+        else if (item.getItemId() == R.id.pie_chart_item) {
+            // Go to Gallery Activity
+            startActivity(new Intent(LineChartActivity.this, PieChartActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
     // Code for Menu Ends Here
