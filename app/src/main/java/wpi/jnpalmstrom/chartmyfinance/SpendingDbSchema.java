@@ -22,7 +22,7 @@ public class SpendingDbSchema {
                         SpendingEntry.COLUMN_NAME_FOOD + " REAL," +
                         SpendingEntry.COLUMN_NAME_HEALTH + " REAL," +
                         SpendingEntry.COLUMN_NAME_SHOPPING + " REAL," +
-                        SpendingEntry.COLUMN_NAME_OTHER + " REAL," +
+                        SpendingEntry.COLUMN_NAME_OTHER + " REAL" +
                         ")";
 
         public static final String SQL_DELETE_ENTRIES =
