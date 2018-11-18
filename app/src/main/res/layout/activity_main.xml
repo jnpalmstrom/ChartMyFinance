@@ -2,19 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="8dp"
         android:text="Record Your Daily Spending"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:padding="8dp"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/travelEntry"
@@ -82,10 +82,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/submitButton"
+        android:id="@+id/submitPieButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onSubmitForm"
-        android:text="Submit!" />
+        android:onClick="onSubmitPieForm"
+        android:padding="5dp"
+        android:text="Submit to Pie Chart!" />
+
+    <Button
+        android:id="@+id/submitBarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmitBarForm"
+        android:padding="5dp"
+        android:text="Submit to Bar Chart!" />
 
 </LinearLayout>

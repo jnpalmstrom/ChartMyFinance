@@ -71,16 +71,7 @@ public class PieChartActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.home_item) {
-            // Go to Take Picture Activity
             startActivity(new Intent(PieChartActivity.this, MainActivity.class));
-        }
-        else if (item.getItemId() == R.id.line_chart_item) {
-            // Go to Gallery Activity
-            startActivity(new Intent(PieChartActivity.this, LineChartActivity.class));
-        }
-        else if (item.getItemId() == R.id.pie_chart_item) {
-            // Go to Gallery Activity
-            startActivity(new Intent(PieChartActivity.this, PieChartActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
