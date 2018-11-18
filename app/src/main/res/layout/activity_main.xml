@@ -6,6 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Your Daily Spending"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
     <EditText
         android:id="@+id/travelEntry"
         android:layout_width="match_parent"
@@ -76,6 +86,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onSubmitForm"
-        android:text="Submit Form" />
+        android:text="Submit!" />
 
 </LinearLayout>
