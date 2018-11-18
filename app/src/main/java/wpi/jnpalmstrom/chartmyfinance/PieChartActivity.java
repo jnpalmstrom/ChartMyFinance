@@ -18,10 +18,38 @@ public class PieChartActivity extends AppCompatActivity {
 
     private PieChartView pieChartView;
 
+    private float totalCost;
+    private float travelCost;
+    private float shoppingCost;
+    private float foodCost;
+    private float healthCost;
+    private float otherCost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
+
+        Intent intent = getIntent();
+        String travelCost = intent.getStringExtra("travelCost");
+        String shoppingCost = intent.getStringExtra("shoppingCost");
+        String foodCost = intent.getStringExtra("foodCost");
+        String healthCost = intent.getStringExtra("healthCost");
+        String otherCost = intent.getStringExtra("otherCost");
+
+        this.travelCost = Long.parseLong(travelCost);
+        this.shoppingCost = Long.parseLong(shoppingCost);
+        this.foodCost = Long.parseLong(foodCost);
+        this.healthCost = Long.parseLong(healthCost);
+        this.otherCost = Long.parseLong(otherCost);
+
+        this.totalCost = this.travelCost + this.shoppingCost + this.foodCost + this.healthCost + this.otherCost;
+
+        this.travelCost = (this.travelCost / this.totalCost) * 100;
+        this.shoppingCost = (this.shoppingCost / this.totalCost) * 100;
+        this.foodCost = (this.foodCost / this.totalCost) * 100;
+        this.healthCost = (this.healthCost / this.totalCost) * 100;
+        this.otherCost = (this.otherCost / this.totalCost) * 100;
 
         drawPieChart();
     }
@@ -57,10 +85,11 @@ public class PieChartActivity extends AppCompatActivity {
         pieChartView = findViewById(R.id.pie_chart);
 
         List pieData = new ArrayList<>();
-        pieData.add(new SliceValue(15, Color.BLUE).setLabel("Shopping"));
-        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Food"));
-        pieData.add(new SliceValue(10, Color.RED).setLabel("Transportation"));
-        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Savings"));
+        pieData.add(new SliceValue(shoppingCost, Color.BLUE).setLabel("Shopping"));
+        pieData.add(new SliceValue(foodCost, Color.GRAY).setLabel("Food"));
+        pieData.add(new SliceValue(travelCost, Color.RED).setLabel("Travel"));
+        pieData.add(new SliceValue(healthCost, Color.GREEN).setLabel("Health"));
+        pieData.add(new SliceValue(otherCost, Color.MAGENTA).setLabel("Other"));
 
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);

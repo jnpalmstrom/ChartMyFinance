@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +42,32 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     // Code for Menu ends here
+
+    public void onSubmitForm(View v) {
+        final EditText travelField = (EditText) findViewById(R.id.travelEntry);
+        String travelCost = travelField.getText().toString();
+
+        final EditText foodField = (EditText) findViewById(R.id.foodEntry);
+        String foodCost = foodField.getText().toString();
+
+        final EditText shoppingField = (EditText) findViewById(R.id.shoppingEntry);
+        String shoppingCost = shoppingField.getText().toString();
+
+        final EditText healthField = (EditText) findViewById(R.id.healthEntry);
+        String healthCost = healthField.getText().toString();
+
+        final EditText otherField = (EditText) findViewById(R.id.otherEntry);
+        String otherCost = otherField.getText().toString();
+
+        Intent intent = new Intent(MainActivity.this, PieChartActivity.class);
+        intent.putExtra("travelCost", travelCost);
+        intent.putExtra("foodCost", foodCost);
+        intent.putExtra("shoppingCost", shoppingCost);
+        intent.putExtra("healthCost", healthCost);
+        intent.putExtra("otherCost", otherCost);
+        startActivity(intent);
+
+    }
 
 
 }
