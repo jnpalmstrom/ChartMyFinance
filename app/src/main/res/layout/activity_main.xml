@@ -85,9 +85,10 @@
         android:id="@+id/submitPieButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
         android:onClick="onSubmitPieForm"
         android:padding="5dp"
-        android:text="Submit to Pie Chart!" />
+        android:text="See Percent Spending!" />
 
     <Button
         android:id="@+id/submitBarButton"
@@ -95,6 +96,6 @@
         android:layout_height="wrap_content"
         android:onClick="onSubmitBarForm"
         android:padding="5dp"
-        android:text="Submit to Bar Chart!" />
+        android:text="See Total Spending!" />
 
 </LinearLayout>
