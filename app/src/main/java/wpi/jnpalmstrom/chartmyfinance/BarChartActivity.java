@@ -85,7 +85,6 @@ public class BarChartActivity extends AppCompatActivity {
 
         data = new ColumnChartData(columns);
         data.setBaseValue(0);
-        data.setValueLabelBackgroundAuto(true);
         data.setValueLabelTextSize(16);
 
         Axis axisX = new Axis();
