@@ -92,47 +92,6 @@ public class PieChartActivity extends AppCompatActivity {
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);
         pieChartData.setHasCenterCircle(true).setCenterText1("Daily Spending").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
         pieChartView.setPieChartData(pieChartData);
-
-        /*pieChartView = (PieChartView) findViewById(R.id.pie_chart);
-
-        PieChartData data = new PieChartData();
-
-        List<SliceValue> slices = new ArrayList<SliceValue>();
-
-        SliceValue val1 = new SliceValue();
-        val1.setColor(Color.RED);
-        val1.setLabel("Food");
-        val1.setValue(45);
-
-        SliceValue val2 = new SliceValue();
-        val2.setColor(Color.BLUE);
-        val2.setLabel("Transportation");
-        val2.setValue(20);
-
-        SliceValue val3 = new SliceValue();
-        val3.setColor(Color.YELLOW);
-        val3.setLabel("Shopping");
-        val3.setValue(15);
-
-        SliceValue val4 = new SliceValue();
-        val4.setColor(Color.GREEN);
-        val4.setLabel("Bills");
-        val4.setValue(10);
-
-        SliceValue val5 = new SliceValue();
-        val5.setColor(Color.YELLOW);
-        val5.setLabel("Emergency");
-        val5.setValue(10);
-
-        slices.add(val1);
-        slices.add(val2);
-        slices.add(val3);
-        slices.add(val4);
-        slices.add(val5);
-
-        data.setValues(slices);
-
-        pieChartView.setPieChartData(data);*/
     }
 
 }
