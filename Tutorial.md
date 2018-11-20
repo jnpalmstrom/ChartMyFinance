@@ -22,7 +22,7 @@ dependencies into your build.gradle. You will only need to add these dependencie
 file and not your project's build.gradle file. You simply just need to add the following line into
 your list of dependencies.
 
-    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
 
 Once you have added this line, you will want to sync your gradle file (This requires Internet access).
 
