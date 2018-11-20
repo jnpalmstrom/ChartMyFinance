@@ -2,13 +2,13 @@
 
 **Author(s):** Evan Plevinsky and Jack Palmstrom
 
-**Summary:** CS4518 Topic Proposal project and README file
+**Summary:** CS4518 Topic Proposal project focused on implementing hellocharts-android into a project
 
-Status: draft
 
 ## What's in the zip file?
 
-The zip files contains the finished code finished code for our project and a README.md file.
+The zip files contains the finished for our project, the starter code to complete our project, 
+ a brief demo on an AVD
 
 The finished code demonstrates the following:
 
